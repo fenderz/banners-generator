@@ -1,0 +1,33 @@
+.fadein-bottom
+    opacity 0
+    transform translate(0, 20%)
+    transition all .3s $timing-function
+
+.fadein-top
+    opacity 0
+    transform translate(0, -20%)
+    transition all .3s $timing-function
+
+.fadein-right
+    opacity 0
+    transform translate(20%, 0)
+    transition all .3s $timing-function
+
+.fadein-left
+    opacity 0
+    transform translate(-0%, 0)
+    transition all .3s $timing-function
+
+.animate-first
+    transition-delay .6s
+
+.animate-second
+    transition-delay .9s
+
+.slider__item_active
+    .fadein-bottom
+    .fadein-right
+    .fadein-left
+    .fadein-top
+        opacity 1
+        transform translate(0,0)
