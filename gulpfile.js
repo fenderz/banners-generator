@@ -15,10 +15,13 @@ gulp.task('styles', function () {
     return gulp
         .src(stylesPath)
         .pipe(stylus({
-            url: 'url'
+            url: {
+                name: 'url',
+                limit: false
+            }
         }))
         .pipe(concat('bundle.css'))
-        //.pipe(cssmin())
+        .pipe(cssmin())
         //.pipe(cssnano())
         .pipe(rename({suffix: '.min'}))
         .pipe(gulp.dest('./public/styles'));
@@ -28,7 +31,7 @@ gulp.task('scripts', function() {
     return gulp
         .src(scriptsPath)
         .pipe(concat('bundle.js'))
-        //.pipe(uglify())
+        .pipe(uglify())
         .pipe(rename({suffix: '.min'}))
         .pipe(gulp.dest('./public/scripts'));
 });
