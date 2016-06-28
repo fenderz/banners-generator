@@ -15,7 +15,7 @@ gulp.task('styles', function () {
     return gulp
         .src(stylesPath)
         .pipe(stylus({
-            url: 'inline-url'
+            url: 'url'
         }))
         .pipe(concat('bundle.css'))
         //.pipe(cssmin())
