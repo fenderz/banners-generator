@@ -1,8 +1,8 @@
 {
   "main": {
     "style":{
-      "color-1": "#A169F7",
-      "color-2": "#fff",
+      "color1": "#A169F7",
+      "color2": "#fff",
       "defaultFont": "Arial, sans-serif"
     },
     "content":{
@@ -14,7 +14,7 @@
   "animation": {
     "slide": {
       "delay": 3000,
-      "time": 0.6,
+      "time": "0.6",
       "function": "ease"
     }
   },

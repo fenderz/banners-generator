@@ -1,3 +1,4 @@
+var fs = require('fs');
 var gulp = require('gulp');
 var stylus = require('gulp-stylus');
 var concat = require('gulp-concat');
@@ -6,7 +7,6 @@ var uglify = require('gulp-uglify');
 var cssmin = require('gulp-cssmin');
 var cssnano = require('gulp-cssnano');
 var rename = require('gulp-rename');
-var fs = require('fs');
 
 var stylesPath = 'app/assets/styles/*.{styl,css}';
 var scriptsPath = 'app/assets/scripts/*.js';
@@ -23,8 +23,8 @@ gulp.task('styles', function () {
             rawDefine: { data: json }
         }))
         .pipe(concat('bundle.css'))
-        .pipe(cssmin())
-        //.pipe(cssnano())
+        //.pipe(cssmin())
+        .pipe(cssnano())
         .pipe(rename({suffix: '.min'}))
         .pipe(gulp.dest('./public/styles'));
 });
