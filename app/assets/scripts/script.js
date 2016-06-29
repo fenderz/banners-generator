@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-    var DELAY = 3000;
+    var DELAY = document.querySelector('.slider').dataset.animationDelay || 3000;
     var ACTIVE_CLASS = 'slider__item_active';
 
     var slideNodesList = Array.from(document.querySelectorAll('.slider__item'));

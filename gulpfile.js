@@ -6,10 +6,11 @@ var uglify = require('gulp-uglify');
 var cssmin = require('gulp-cssmin');
 var cssnano = require('gulp-cssnano');
 var rename = require('gulp-rename');
+var fs = require('fs');
 
 var stylesPath = 'app/assets/styles/*.{styl,css}';
 var scriptsPath = 'app/assets/scripts/*.js';
-
+var json = JSON.parse(fs.readFileSync('./app/json/data.json'));
 
 gulp.task('styles', function () {
     return gulp
@@ -18,7 +19,8 @@ gulp.task('styles', function () {
             url: {
                 name: 'url',
                 limit: false
-            }
+            },
+            rawDefine: { data: json }
         }))
         .pipe(concat('bundle.css'))
         .pipe(cssmin())

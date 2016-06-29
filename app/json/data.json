@@ -1,4 +1,11 @@
 {
+  "animation": {
+    "slide": {
+      "delay": 3000,
+      "time": 0.6,
+      "function": "ease"
+    }
+  },
   "static": {
     "title":"title"
   },

@@ -7,5 +7,8 @@ $color-purple = #A169F7
 $color-white = #fff
 
 // Animation
-
-$timing-function = ease
+$timing-function = unquote(data.animation.slide.function)
+$slide-animation-time = unquote(data.animation.slide.time) + 's'
+$inner-animation-time = unquote(data.animation.slide.time) + 's'
+$first-animation-delay = $slide-animation-time
+$second-animation-delay = (unquote(data.animation.slide.time) + 0.3) + 's'
