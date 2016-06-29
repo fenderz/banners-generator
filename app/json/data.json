@@ -1,5 +1,6 @@
 {
   "static": {
+    "title":"title"
   },
   "slides": [
     { "id": 1, "image": "", "title": ""},
