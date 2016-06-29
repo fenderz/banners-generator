@@ -1,13 +1,22 @@
 {
+  "main": {
+    "style":{
+      "color-1": "#A169F7",
+      "color-2": "#fff",
+      "defaultFont": "Arial, sans-serif"
+    },
+    "content":{
+      "ageLimit": "16+",
+      "linkIos": "https://itunes.apple.com/ru/app/avito-uslugi-pro-vozmoznost/id1011876040?mt=8",
+      "linkAndroid": "https://play.google.com/store/apps/details?id=com.avito.services&hl=ru"
+    }
+  },
   "animation": {
     "slide": {
       "delay": 3000,
       "time": 0.6,
       "function": "ease"
     }
-  },
-  "static": {
-    "title":"title"
   },
   "slides": [
     { "id": 1, "image": "", "title": ""},

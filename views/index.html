@@ -14,15 +14,15 @@
 {% else %}
     {{ data|json}}
     <div class="banner-1000x120">
-        <span class="age-limit">16+</span>
+        <span class="age-limit">{{ data.main.content.ageLimit }}</span>
         <div class="static-holder">
             <span class="title-2 color-purple">
                 Загрузить<br>
                 приложение
             </span>
             <div class="app-links">
-                <a target="_blank" href="https://itunes.apple.com/ru/app/avito-uslugi-pro-vozmoznost/id1011876040?mt=8" class="app-links-ios"></a>
-                <a target="_blank" href="https://play.google.com/store/apps/details?id=com.avito.services&hl=ru" class="app-links-android"></a>
+                <a target="_blank" href="{{ data.main.content.linkIos }}" class="app-links-ios"></a>
+                <a target="_blank" href="{{ data.main.content.linkAndroid }}" class="app-links-android"></a>
             </div>
         </div>
         <div class="slider" data-animation-delay="{{ data.animation.slide.delay }}">
