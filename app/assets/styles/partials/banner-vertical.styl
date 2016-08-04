@@ -13,8 +13,8 @@
     color $color-white
     z-index 100
     position absolute
-    top 27px
-    left $left-offset
+    top $slide-top-offset
+    right $slide-right-offset
 
 .static-holder
     background $color-white
@@ -24,11 +24,11 @@
     bottom 0
     height $static-heigth
     box-sizing border-box
-    padding 28px 0 0 $left-offset
+    padding 11px 0 0 $left-offset
 
 .app-links
     position absolute
-    top 30px
+    top 11px
     right $static-side-offset
 
     &-ios
@@ -40,7 +40,7 @@
 
     &-ios
         background-image url('../image/ios-logo.svg')
-        margin-right 8px
+        margin-right 11px
 
     &-android
         background-image url('../image/android-logo.svg')
@@ -83,13 +83,13 @@
         display table-row
 
         .slide-content__inner
-            height 135px
+            height 55px
 
     &__bottom
         display table-row
 
 .phone
-    background url('../image/300x600/device-uslugi-pro.png') no-repeat 0 0 / cover
+    background url('../image/device-uslugi-pro.png') no-repeat 0 0 / cover
     width $phone-width
     height $phone-height
     display inline-block
@@ -101,4 +101,4 @@
     height $logo-height
     display inline-block
     vertical-align top
-    margin-left 9px
+    margin-left $slide-innder-offset
