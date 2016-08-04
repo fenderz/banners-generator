@@ -1,9 +1,16 @@
 {
   "main": {
+    "name": "Banner 300x600",
     "style":{
       "color1": "#A169F7",
       "color2": "#fff",
       "defaultFont": "Arial, sans-serif"
+    },
+    "dimensions":{
+      "width": 300,
+      "height": 600,
+      "sideOffset": 18,
+      "appLogoWidth": 52
     },
     "content":{
       "ageLimit": "16+",
@@ -14,7 +21,7 @@
   "animation": {
     "slide": {
       "delay": 3000,
-      "time": "0.6",
+      "time": 0.6,
       "function": "ease"
     }
   },

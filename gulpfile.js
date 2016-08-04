@@ -24,7 +24,7 @@ gulp.task('styles', function () {
         }))
         .pipe(concat('bundle.css'))
         //.pipe(cssmin())
-        .pipe(cssnano())
+        //.pipe(cssnano())
         .pipe(rename({suffix: '.min'}))
         .pipe(gulp.dest('./public/styles'));
 });

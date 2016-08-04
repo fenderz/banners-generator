@@ -1,0 +1,104 @@
+.banner-300x600
+    width $width
+    height $heigth
+    overflow hidden
+    position relative
+    border 1px solid $color-purple
+    font-family $fontDefault
+    background $color-purple
+
+.age-limit
+    opacity .7
+    font 400 14px/30px $fontDefault
+    color $color-white
+    z-index 100
+    position absolute
+    top 27px
+    left 19px
+
+.static-holder
+    background $color-white
+    position absolute
+    left 0
+    right 0
+    bottom 0
+    height $static-heigth
+    box-sizing border-box
+    padding 28px 0 0 $static-side-offset
+
+.app-links
+    position absolute
+    top 30px
+    right $static-side-offset
+
+    &-ios
+    &-android
+        display inline-block
+        width $app-logo-width
+        height $app-logo-heigth
+        background no-repeat 0 0 / cover
+
+    &-ios
+        background-image url('../image/ios-logo.svg')
+        margin-right 8px
+
+    &-android
+        background-image url('../image/android-logo.svg')
+
+.slider
+    position absolute
+    top $slide-top-offset
+    bottom $slide-bottom-offset
+    overflow hidden
+    left $slide-left-offset
+    right $slide-right-offset
+
+    &__item
+        position absolute
+        left 0
+        top 0
+        right 0
+        bottom 0
+        opacity 0
+        visibility hidden
+        transition opacity $slide-animation-time $timing-function, visibility $slide-animation-time $timing-function
+
+        &_active
+            opacity 1
+            visibility visible
+
+.slide-content
+    display table
+    width 100%
+    height 100%
+
+    &__inner
+        display table-cell
+        vertical-align bottom
+
+        &_valign-top
+            vertical-align top
+
+    &__top
+        display table-row
+
+        .slide-content__inner
+            height 135px
+
+    &__bottom
+        display table-row
+
+.phone
+    background url('../image/300x600/device-uslugi-pro.png') no-repeat 0 0 / cover
+    width 280px
+    height 237px
+    display inline-block
+    vertical-align bottom
+
+.logo
+    background url('../image/avito-logo.svg') no-repeat 0 0 / cover
+    width 247px
+    height 40px
+    display inline-block
+    vertical-align top
+    margin-left 9px
