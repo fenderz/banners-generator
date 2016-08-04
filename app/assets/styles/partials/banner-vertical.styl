@@ -1,4 +1,4 @@
-.banner-300x600
+.{$banner-name}
     width $width
     height $heigth
     overflow hidden
@@ -14,7 +14,7 @@
     z-index 100
     position absolute
     top 27px
-    left 19px
+    left $left-offset
 
 .static-holder
     background $color-white
@@ -24,7 +24,7 @@
     bottom 0
     height $static-heigth
     box-sizing border-box
-    padding 28px 0 0 $static-side-offset
+    padding 28px 0 0 $left-offset
 
 .app-links
     position absolute
@@ -90,15 +90,15 @@
 
 .phone
     background url('../image/300x600/device-uslugi-pro.png') no-repeat 0 0 / cover
-    width 280px
-    height 237px
+    width $phone-width
+    height $phone-height
     display inline-block
     vertical-align bottom
 
 .logo
     background url('../image/avito-logo.svg') no-repeat 0 0 / cover
-    width 247px
-    height 40px
+    width $logo-width
+    height $logo-height
     display inline-block
     vertical-align top
     margin-left 9px
