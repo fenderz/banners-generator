@@ -1,6 +1,6 @@
 {
   "main": {
-    "name": "Banner 300x250",
+    "name": "banner-300x250",
     "style":{
       "color1": "#A169F7",
       "color2": "#fff",

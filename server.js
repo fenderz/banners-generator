@@ -6,7 +6,7 @@ var app = express();
 app.engine('html', swig.renderFile);
 
 app.set('view engine', 'html');
-app.set('views', __dirname + '/views');
+app.set('views', __dirname + '/dist');
 
 app.use('/', express.static(__dirname + '/public'));
 app.use('/', express.static(__dirname + '/app/assets'));
