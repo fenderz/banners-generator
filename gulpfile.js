@@ -4,8 +4,7 @@ var stylus = require('gulp-stylus');
 var concat = require('gulp-concat');
 var nodemon = require('gulp-nodemon');
 var uglify = require('gulp-uglify');
-var cssmin = require('gulp-cssmin');
-var cssnano = require('gulp-cssnano');
+var csso = require('gulp-csso');
 var rename = require('gulp-rename');
 
 var stylesPath = 'app/assets/styles/*.{styl,css}';
@@ -23,8 +22,7 @@ gulp.task('styles', function () {
             rawDefine: { data: json }
         }))
         .pipe(concat('bundle.css'))
-        //.pipe(cssmin())
-        .pipe(cssnano())
+        .pipe(csso())
         .pipe(rename({suffix: '.min'}))
         .pipe(gulp.dest('./public/styles'));
 });
