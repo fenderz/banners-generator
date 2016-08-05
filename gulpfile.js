@@ -5,6 +5,7 @@ var concat = require('gulp-concat');
 var nodemon = require('gulp-nodemon');
 var uglify = require('gulp-uglify');
 var csso = require('gulp-csso');
+var htmlmin = require('gulp-html-minifier');
 var rename = require('gulp-rename');
 
 var stylesPath = 'app/assets/styles/*.{styl,css}';
@@ -36,6 +37,12 @@ gulp.task('scripts', function() {
         .pipe(gulp.dest('./public/scripts'));
 });
 
+gulp.task('htmlMinify', function() {
+    gulp.src('./views/*.html')
+        .pipe(htmlmin({collapseWhitespace: true}))
+        .pipe(gulp.dest('./dist'))
+});
+
 gulp.task('watch', function () {
     gulp.watch('app/assets/**/*.{styl,css}', ['styles']);
     gulp.watch(scriptsPath, ['scripts']);
@@ -51,4 +58,4 @@ gulp.task('startServer', function () {
     })
 });
 
-gulp.task('default', ['styles', 'scripts', 'startServer', 'watch']);
+gulp.task('default', ['styles', 'scripts', 'htmlMinify', 'startServer', 'watch']);
