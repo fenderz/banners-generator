@@ -9,11 +9,11 @@
 
 .age-limit
     opacity .7
-    font 400 14px/30px $fontDefault
+    font 400 14px/1.2 $fontDefault
     color $color-white
     z-index 100
     position absolute
-    top 27px
+    top 12px
     left $left-offset
 
 .static-holder
@@ -25,6 +25,8 @@
     height $static-heigth
     box-sizing border-box
     padding $static-top-offset 0 0 $left-offset
+    z-index 10
+    box-shadow 0 0 3px rgba(#000, .3)
 
 .app-links
     position absolute
@@ -41,7 +43,7 @@
 
     &-ios
         background-image url('../image/ios-logo.svg')
-        margin-right 8px
+        margin-right 5px
 
     &-android
         background-image url('../image/android-logo.svg')
@@ -84,7 +86,7 @@
         display table-row
 
         .slide-content__inner
-            height 135px
+            height 70px
 
     &__bottom
         display table-row
