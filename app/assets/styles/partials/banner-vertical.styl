@@ -24,11 +24,12 @@
     bottom 0
     height $static-heigth
     box-sizing border-box
-    padding 28px 0 0 $left-offset
+    padding $static-top-offset 0 0 $left-offset
 
 .app-links
     position absolute
-    top 30px
+    top 50%
+    margin-top -($app-logo-heigth / 2)
     right $static-side-offset
 
     &-ios
