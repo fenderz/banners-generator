@@ -1,24 +1,24 @@
 {
   "main": {
-    "name": "Banner 336x280",
+    "name": "Banner 200x200",
     "style":{
       "color1": "#A169F7",
       "color2": "#fff",
       "defaultFont": "Arial, sans-serif"
     },
     "dimensions":{
-      "width": 336,
-      "height": 280,
-      "slideTopOffset": 13,
-      "slideBottomOffset": 60,
-      "staticTopOffset": 9,
-      "sideOffset": 22,
+      "width": 200,
+      "height": 200,
+      "slideTopOffset": 12,
+      "slideBottomOffset": 50,
+      "staticTopOffset": 7,
+      "sideOffset": 10,
       "innerOffset": 0,
-      "appLogoWidth": 42,
-      "logoWidth": 260,
-      "logoHeight": 42,
-      "phoneWidth": 289,
-      "phoneHeight": 128
+      "appLogoWidth": 34,
+      "logoWidth": 160,
+      "logoHeight": 26,
+      "phoneWidth": 169,
+      "phoneHeight": 76
     },
     "content":{
       "ageLimit": "16+",
