@@ -3,118 +3,43 @@
     height $heigth
     overflow hidden
     position relative
-    border 1px solid $color-purple
+    border 1px solid $color-gray
     font-family $fontDefault
-    background $color-purple
 
-.age-limit
-    opacity .7
-    font 400 14px/1.2 $fontDefault
-    color $color-white
-    z-index 100
-    position absolute
-    top 12px
-    left $left-offset
+.content
+    padding $content-padding
 
-.static-holder
-    background $color-white
-    position absolute
-    left 0
-    right 0
-    bottom 0
-    height $static-heigth
-    box-sizing border-box
-    padding $static-top-offset 0 0 $left-offset
-    z-index 10
-    box-shadow 0 0 3px rgba(#000, .3)
-
-.app-links
-    position absolute
-    top 50%
-    margin-top -($app-logo-heigth / 2)
-    right $static-side-offset
-
-    &-ios
-    &-android
-        display inline-block
-        width $app-logo-width
-        height $app-logo-heigth
-        background no-repeat 0 0 / cover
-
-    &-ios
-        background-image url('../image/ios-logo.svg')
-        margin-right 5px
-
-    &-android
-        background-image url('../image/android-logo.svg')
-
-.slider
-    position absolute
-    top $slide-top-offset
-    bottom $slide-bottom-offset
-    overflow hidden
-    left $slide-left-offset
-    right $slide-right-offset
-
-    &__item
-        position absolute
-        left 0
-        top 0
-        right 0
-        bottom 0
-        opacity 0
-        visibility hidden
-        transition opacity $slide-animation-time $timing-function, visibility $slide-animation-time $timing-function
-
-        &_active
-            opacity 1
-            visibility visible
-
-.slide-content
-    display table
-    width 100%
-    height 100%
-
-    &__inner
-        display table-cell
-        vertical-align bottom
-
-        &_valign-top
-            vertical-align top
-
-    &__top
-        display table-row
-
-        .slide-content__inner
-            height 70px
-
-    &__bottom
-        display table-row
-
-.phone
-    background url('../image/device-uslugi-pro.png') no-repeat 0 0 / cover
-    width $phone-width
-    height $phone-height
-    display inline-block
-    vertical-align bottom
-
-.logo
-    background url('../image/avito-logo.svg') no-repeat 0 0 / cover
-    width $logo-width
-    height $logo-height
-    display inline-block
-    vertical-align top
-    margin-left $slide-inner-offset
-
-.banner-link
+.image
     display block
+    width $image-width
+    height $image-height
+
+    &-link
+        display block
+
+.attribution
     position absolute
-    left 0
-    top 0
-    right 0
-    bottom $slide-bottom-offset
-    z-index 20
-    outline 0
-    text-decoration none
+    right -1px
+    bottom -1px
+    background #ffb300
+    color #fff
+    padding 0 5px 0 15px
+    height 13px
+    font-size 8px
+    line-height @height
+    font-weight bold
+    border-top-left-radius 3px
 
+    &:before
+        content ''
+        display block
+        position absolute
+        left 3px
+        top 3px
+        width 7px
+        height 7px
+        border-radius 50%
+        background radial-gradient(ellipse at center, #fff 0%, #fff 20%, #ffb300 30%, #ffb300 50%, #fff 60%, #fff 100%); // @stylint off
 
+    &:hover
+        color #fff !important

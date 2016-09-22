@@ -1,40 +1,27 @@
 {
   "main": {
-    "name": "banner-240x400",
+    "name": "Yield-240x400",
     "style":{
-      "color1": "#A169F7",
-      "color2": "#fff",
+      "color1": "#008CC3",
+      "color2": "#E1E1E1",
+      "color3": "#629C1C",
+      "color4": "#000000",
       "defaultFont": "Arial, sans-serif"
     },
     "dimensions":{
       "width": 240,
       "height": 400,
-      "slideTopOffset": 40,
-      "slideBottomOffset": 65,
-      "staticTopOffset": 12,
-      "sideOffset": 10,
-      "innerOffset": 9,
-      "appLogoWidth": 38,
-      "logoWidth": 190,
-      "logoHeight": 31,
-      "phoneWidth": 220,
-      "phoneHeight": 174
+      "imageWidth": 238,
+      "imageHeight": 126,
+      "contentPadding": 20
     },
     "content":{
-      "ageLimit": "16+",
-      "linkIos": "https://itunes.apple.com/ru/app/avito-uslugi-pro-vozmoznost/id1011876040?mt=8",
-      "linkAndroid": "https://play.google.com/store/apps/details?id=com.avito.services&hl=ru"
+      "title": "Пластырь от псориаза поможет победить недуг! 10 дней гарантированный возврат! Подарки всем",
+      "description": "Пластырь от псориаза поможет победить недуг! 10 дней гарантированный возврат! Подарки всем",
+      "domain": "brightautocentr.ru",
+      "img": "../image/image.png",
+      "link": "#",
+      "infoLink": "#"
     }
-  },
-  "animation": {
-    "slide": {
-      "delay": 3000,
-      "time": 0.6,
-      "function": "ease"
-    }
-  },
-  "slides": [
-    { "id": 1, "image": "", "title": ""},
-    { "id": 2, "image": "", "title": ""}
-  ]
+  }
 }

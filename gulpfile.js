@@ -23,7 +23,7 @@ gulp.task('styles', function () {
             rawDefine: { data: json }
         }))
         .pipe(concat('bundle.css'))
-        .pipe(csso())
+        //.pipe(csso())
         .pipe(rename({suffix: '.min'}))
         .pipe(gulp.dest('./public/styles'));
 });
@@ -35,12 +35,6 @@ gulp.task('scripts', function() {
         .pipe(uglify())
         .pipe(rename({suffix: '.min'}))
         .pipe(gulp.dest('./public/scripts'));
-});
-
-gulp.task('htmlMinify', function() {
-    gulp.src('./views/*.html')
-        .pipe(htmlmin({collapseWhitespace: true}))
-        .pipe(gulp.dest('./dist'))
 });
 
 gulp.task('watch', function () {
@@ -58,4 +52,4 @@ gulp.task('startServer', function () {
     })
 });
 
-gulp.task('default', ['styles', 'scripts', 'htmlMinify', 'startServer', 'watch']);
+gulp.task('default', ['styles', 'scripts', 'startServer', 'watch']);
