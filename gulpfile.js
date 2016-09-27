@@ -42,6 +42,12 @@ gulp.task('watch', function () {
     gulp.watch(scriptsPath, ['scripts']);
 });
 
+gulp.task('htmlMinify', function() {
+    gulp.src('./views/*.html')
+        //.pipe(htmlmin({collapseWhitespace: true}))
+        .pipe(gulp.dest('./dist'))
+});
+
 gulp.task('startServer', function () {
     nodemon({
         script: 'server.js',
@@ -52,4 +58,4 @@ gulp.task('startServer', function () {
     })
 });
 
-gulp.task('default', ['styles', 'scripts', 'startServer', 'watch']);
+gulp.task('default', ['styles', 'scripts', 'htmlMinify', 'startServer', 'watch']);

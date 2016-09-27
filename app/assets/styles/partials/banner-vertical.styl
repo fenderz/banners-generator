@@ -7,7 +7,8 @@
     font-family $fontDefault
 
 .content
-    padding $content-padding
+    padding 12px 20px 10px 15px
+    overflow hidden
 
 .image
     display block
@@ -16,6 +17,7 @@
 
     &-link
         display block
+        float left
 
 .attribution
     position absolute
@@ -27,7 +29,6 @@
     height 13px
     font-size 8px
     line-height @height
-    font-weight bold
     border-top-left-radius 3px
 
     &:before
@@ -43,3 +44,19 @@
 
     &:hover
         color #fff !important
+
+.button
+    float right
+    box-sizing border-box
+    height 50px
+    min-width 244px
+    border 1px solid $color-gray
+    font 400 20px $fontDefault
+    line-height @height
+    text-align center
+    text-decoration none
+    border-radius 3px
+    color $color-dark
+    margin-top (($heigth -  @height) / 2)
+    margin-right 35px
+    margin-left 15px

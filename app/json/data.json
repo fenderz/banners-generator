@@ -1,6 +1,6 @@
 {
   "main": {
-    "name": "Yield-240x400",
+    "name": "Yield-1000x120",
     "style":{
       "color1": "#008CC3",
       "color2": "#E1E1E1",
@@ -9,16 +9,17 @@
       "defaultFont": "Arial, sans-serif"
     },
     "dimensions":{
-      "width": 240,
-      "height": 400,
-      "imageWidth": 238,
-      "imageHeight": 126,
+      "width": 1000,
+      "height": 120,
+      "imageWidth": 221,
+      "imageHeight": 118,
       "contentPadding": 20
     },
     "content":{
       "title": "Пластырь от псориаза поможет победить недуг! 10 дней гарантированный возврат! Подарки всем",
       "description": "Пластырь от псориаза поможет победить недуг! 10 дней гарантированный возврат! Подарки всем",
       "domain": "brightautocentr.ru",
+      "button": "Перейти на сайт",
       "img": "../image/image.png",
       "link": "#",
       "infoLink": "#"
