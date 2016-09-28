@@ -1,6 +1,6 @@
 {
   "main": {
-    "name": "Yield-728x90",
+    "name": "Yield-1000x90",
     "style":{
       "color1": "#008CC3",
       "color2": "#E1E1E1",
@@ -9,7 +9,7 @@
       "defaultFont": "Arial, sans-serif"
     },
     "dimensions":{
-      "width": 728,
+      "width": 1000,
       "height": 90,
       "imageWidth": 165,
       "imageHeight": 88,
