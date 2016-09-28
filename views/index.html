@@ -14,16 +14,16 @@
     <div class="banner-{{ data.main.dimensions.width }}x{{ data.main.dimensions.height }}">
         <div class='attribution'>Реклама</div>
         <a href="{{ data.main.content.link }}" class="image-link" target="_top">
+            <img class="image-cover" src="{{ data.main.content.img }}">
             <img class="image" src="{{ data.main.content.img }}">
         </a>
-        {#<a href="{{ data.main.content.link }}" class="button" target="_top">{{ data.main.content.button }}</a>#}
         <div class="content">
             <h1 class="title">
                 <a href="{{ data.main.content.link }}" class="title-link" target="_top">{{ data.main.content.title }}</a>
             </h1>
-            <p class="description">
+            {#<p class="description">
                 <a href="{{ data.main.content.link }}" class="description-link" target="_top">{{ data.main.content.description }}</a>
-            </p>
+            </p>#}
             <a href="{{ data.main.content.link }}" class="domain" target="_top">{{ data.main.content.domain }}</a>
         </div>
     </div>

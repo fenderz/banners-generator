@@ -7,17 +7,33 @@
     font-family $fontDefault
 
 .content
-    padding 12px 20px 10px 15px
-    overflow hidden
+    padding 11px 20px 14px
 
 .image
     display block
     width $image-width
     height $image-height
+    margin 0 auto
+    position relative
+    z-index 10
 
     &-link
         display block
-        float left
+        width 100%
+        height $image-height
+        position relative
+        overflow hidden
+
+    &-cover
+        position absolute
+        width 100%
+        top 0
+        bottom 0
+        display block
+        z-index 1
+        margin auto
+        filter blur(5px)
+        opacity .6
 
 .attribution
     position absolute
@@ -44,19 +60,3 @@
 
     &:hover
         color #fff !important
-
-/*.button
-    float right
-    box-sizing border-box
-    height 40px
-    min-width 160px
-    border 1px solid $color-gray
-    font 400 16px $fontDefault
-    line-height @height
-    text-align center
-    text-decoration none
-    border-radius 3px
-    color $color-dark
-    margin-top (($heigth -  @height) / 2)
-    margin-right 25px
-    margin-left 15px*/
