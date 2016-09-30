@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function () {
     var DELAY = document.querySelector('.slider').dataset.animationDelay || 3000;
     var ACTIVE_CLASS = 'slider__item_active';
 
-    var slideNodesList = Array.from(document.querySelectorAll('.slider__item'));
+    var slideNodesList = Array.prototype.slice.apply(document.querySelectorAll('.slider__item'));
     var userAgent = window.navigator.userAgent;
     var activeIndex = 0;
 
