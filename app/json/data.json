@@ -1,8 +1,8 @@
 {
   "main": {
-    "name": "banner-240x400",
+    "name": "delivery-240x400",
     "style":{
-      "color1": "#A169F7",
+      "color1": "#00aaff",
       "color2": "#fff",
       "defaultFont": "Arial, sans-serif"
     },
@@ -10,20 +10,17 @@
       "width": 240,
       "height": 400,
       "slideTopOffset": 40,
-      "slideBottomOffset": 65,
+      "slideBottomOffset": 90,
       "staticTopOffset": 12,
       "sideOffset": 10,
       "innerOffset": 9,
-      "appLogoWidth": 38,
-      "logoWidth": 190,
-      "logoHeight": 31,
-      "phoneWidth": 220,
-      "phoneHeight": 174
+      "logoWidth": 186,
+      "logoHeight": 26
     },
     "content":{
       "ageLimit": "16+",
-      "linkIos": "https://itunes.apple.com/ru/app/avito-uslugi-pro-vozmoznost/id1011876040?mt=8",
-      "linkAndroid": "https://play.google.com/store/apps/details?id=com.avito.services&hl=ru"
+      "text": "планшеты и электронные книги",
+      "link": "#"
     }
   },
   "animation": {

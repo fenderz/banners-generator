@@ -1,60 +1,29 @@
 .{$banner-name}
     width $width
     height $heigth
+    box-sizing border-box
+    padding 25px 20px
     overflow hidden
     position relative
-    border 1px solid $color-purple
     font-family $fontDefault
-    background $color-purple
+    background $color-blue url('../image/tablet-img.png') no-repeat 0 0
+    background-size contain
 
 .age-limit
-    opacity .7
-    font 400 14px/1.2 $fontDefault
+    font 400 16px/1.2 $fontDefault
     color $color-white
     z-index 100
     position absolute
     top 12px
     left $left-offset
 
-.static-holder
-    background $color-white
-    position absolute
-    left 0
-    right 0
-    bottom 0
-    height $static-heigth
-    box-sizing border-box
-    padding $static-top-offset 0 0 $left-offset
-    z-index 10
-    box-shadow 0 0 3px rgba(#000, .3)
-
-.app-links
-    position absolute
-    top 50%
-    margin-top -($app-logo-heigth / 2)
-    right $static-side-offset
-
-    &-ios
-    &-android
-        display inline-block
-        width $app-logo-width
-        height $app-logo-heigth
-        background no-repeat 0 0 / cover
-
-    &-ios
-        background-image url('../image/ios-logo.svg')
-        margin-right 5px
-
-    &-android
-        background-image url('../image/android-logo.svg')
-
 .slider
     position absolute
-    top $slide-top-offset
+    top 0
     bottom $slide-bottom-offset
     overflow hidden
-    left $slide-left-offset
-    right $slide-right-offset
+    left 0
+    right 0
 
     &__item
         position absolute
@@ -66,55 +35,50 @@
         visibility hidden
         transition opacity $slide-animation-time $timing-function, visibility $slide-animation-time $timing-function
 
+        &-top
+            width 100%
+            height 192px
+
+        &-bottom
+            padding 0 20px
+
+        &_fill
+            background $color-blue
+
         &_active
             opacity 1
             visibility visible
 
-.slide-content
-    display table
-    width 100%
-    height 100%
-
-    &__inner
-        display table-cell
-        vertical-align bottom
-
-        &_valign-top
-            vertical-align top
-
-    &__top
-        display table-row
-
-        .slide-content__inner
-            height 70px
-
-    &__bottom
-        display table-row
-
-.phone
-    background url('../image/device-uslugi-pro.png') no-repeat 0 0 / cover
-    width $phone-width
-    height $phone-height
-    display inline-block
-    vertical-align bottom
-
 .logo
-    background url('../image/avito-logo.svg') no-repeat 0 0 / cover
+    background url('../image/delivery-logo.svg') no-repeat 0 0
+    background-size cover
     width $logo-width
     height $logo-height
-    display inline-block
-    vertical-align top
-    margin-left $slide-inner-offset
-
-.banner-link
     display block
+    margin 0 auto
+
+.button
+    display block
+    box-sizing border-box
     position absolute
-    left 0
-    top 0
-    right 0
-    bottom $slide-bottom-offset
+    left 20px
+    bottom 25px
+    right 20px
+    /*bottom $slide-bottom-offset*/
     z-index 20
     outline 0
     text-decoration none
+    text-align center
+    color $color-white
+    background $color-blue
+    border 1px solid $color-white
+    border-radius 3px
+    height 44px
+    font 400 16px/44px $fontDefault
+    transition background $slide-animation-time $timing-function, color $slide-animation-time $timing-function
+
+    &:hover
+        background $color-white
+        color $color-blue
 
 
