@@ -25,7 +25,7 @@
   },
   "animation": {
     "slide": {
-      "delay": 3000,
+      "delay": 3500,
       "time": 0.6,
       "function": "ease"
     }
