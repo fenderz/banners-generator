@@ -13,7 +13,7 @@
 {% else %}
     <div class="banner-{{ data.main.dimensions.width }}x{{ data.main.dimensions.height }}">
         <span class="age-limit">{{ data.main.content.ageLimit }}</span>
-        <a href="{{ data.main.content.link }}" class="button" target="_top" rel="noreferrer nofollow">
+        <a href="{{ data.main.content.link }}" class="button" target="_blank" rel="noreferrer nofollow">
             Узнать больше
         </a>
         <div class="slider" data-animation-delay="{{ data.animation.slide.delay }}">
@@ -29,7 +29,7 @@
                 <div class="slider__item-top"></div>
                 <div class="slider__item-bottom">
                     <span class="fadein-right animate-first text title-1 color-white">
-                        Продавайте {{ data.main.content.text }}<br>не только в Москве,<br>но и по всей России!
+                        Продавайте {{ data.main.content.text[data.main.id] }}<br>не только в Москве,<br>но и по всей России!
                     </span>
                 </div>
             </div>
