@@ -9,11 +9,10 @@
     "dimensions":{
       "width": 240,
       "height": 400,
-      "slideTopOffset": 40,
+      "bannerTopOffset": 25,
+      "bannerSideOffset": 20,
+      "slideTopOffset": 0,
       "slideBottomOffset": 90,
-      "staticTopOffset": 12,
-      "sideOffset": 10,
-      "innerOffset": 9,
       "logoWidth": 186,
       "logoHeight": 26
     },

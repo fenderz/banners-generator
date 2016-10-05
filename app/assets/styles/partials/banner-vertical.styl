@@ -2,7 +2,7 @@
     width $width
     height $heigth
     box-sizing border-box
-    padding 25px 20px
+    padding $banner-top-offset $banner-side-offset
     overflow hidden
     position relative
     font-family $fontDefault
@@ -15,11 +15,11 @@
     z-index 100
     position absolute
     top 12px
-    left $left-offset
+    left $banner-side-offset
 
 .slider
     position absolute
-    top 0
+    top $slide-top-offset
     bottom $slide-bottom-offset
     overflow hidden
     left 0
@@ -40,7 +40,7 @@
             height 192px
 
         &-bottom
-            padding 0 20px
+            padding 0 $banner-side-offset
 
         &_fill
             background $color-blue
@@ -55,16 +55,15 @@
     width $logo-width
     height $logo-height
     display block
-    margin -20px auto
+    margin -20px auto 0
 
 .button
     display block
     box-sizing border-box
     position absolute
-    left 20px
-    bottom 25px
-    right 20px
-    /*bottom $slide-bottom-offset*/
+    left $banner-side-offset
+    bottom $banner-bottom-offset
+    right $banner-side-offset
     z-index 20
     outline 0
     text-decoration none
