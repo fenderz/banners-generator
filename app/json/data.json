@@ -1,10 +1,11 @@
 {
   "main": {
-    "id": 1,
+    "id": 0,
     "name": "delivery-240x400",
     "style": {
       "color1": "#00aaff",
       "color2": "#fff",
+      "color3": "#e1e1e1",
       "defaultFont": "Arial, sans-serif"
     },
     "dimensions":{
@@ -20,8 +21,9 @@
     "content":{
       "ageLimit": "16+",
       "text": ["планшеты и электронные книги", "ноутбуки", "товары для компьютера", "товары для детей", "телефоны", "товары для кухни", "одежду", "запчасти", "детскую одежду", "бытовую технику"],
-      "image":["tablet", "nout", "pc", "kids", "phone", "kitchen", "clothes", "spares", "childrens-wear", "device"],
-      "link": "//www.avito.ru/reklama/delivery#buyer"
+      "image": ["tablet", "nout", "pc", "kids", "phone", "kitchen", "clothes", "spares", "childrens-wear", "device"],
+      "categories": [96, 98, 101, 30, 84, 87, 27, 10, 29, 21],
+      "link": "%%CLICK_URL_UNESC%%%%DEST_URL%%"
     }
   },
   "animation": {
