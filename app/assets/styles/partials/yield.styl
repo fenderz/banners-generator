@@ -1,29 +1,26 @@
-.{$banner-name}
-    width $width
-    height $heigth
+#adunit
+    width 1000px
+    height 120px
     overflow hidden
     position relative
     border 1px solid $color-gray
     font-family $fontDefault
-
-    .image
-        margin-right 0
-
-    .title
-        margin-top 0
-
-.content
-    padding 12px 20px 10px 15px
-    overflow hidden
+    box-sizing border-box
+    padding-right 300px
 
 .image
-    display block
+    float left
     width $image-width
     height $image-height
+    margin-right 15px
 
     &-link
         display block
-        float left
+
+    img
+        width $image-width
+        height $image-height
+        display block
 
 .attribution
     position absolute
@@ -51,8 +48,13 @@
     &:hover
         color #fff !important
 
-.button
-    float right
+.call-to-action
+    position absolute
+    right 35px
+    top 35px
+
+.call-to-action-link
+    display block
     box-sizing border-box
     height 50px
     min-width 244px
@@ -63,8 +65,7 @@
     text-decoration none
     border-radius 3px
     color $color-dark
-    margin-top (($heigth -  @height) / 2)
-    margin-right 35px
-    margin-left 15px
 
-
+.logo
+.advertiser
+    display none
