@@ -1,0 +1,56 @@
+.ad-1
+    width $width
+    height $heigth
+    overflow hidden
+    position relative
+    border 1px solid $color-gray
+    font-family $fontDefault
+
+.image
+    float left
+    width $image-width
+    height $image-height
+    margin-right 15px
+
+    &-link
+        display block
+        float left
+    img
+        width $image-width
+        height $image-height
+        display block
+
+.attribution
+    position absolute
+    right -1px
+    bottom -1px
+    background #ffb300
+    color #000
+    padding 0 5px 0 5px
+    height 13px
+    font-size 8px
+    line-height @height
+    border-top-left-radius 3px
+
+.logo
+.body
+.advertiser
+    display none
+
+.call-to-action
+    position absolute
+    margin-top 25px
+    right 25px
+
+    &-link
+        display block
+        box-sizing border-box
+        height 40px
+        min-width 160px
+        border 1px solid $color-gray
+        font 400 16px $fontDefault
+        line-height @height
+        text-align center
+        text-decoration none
+        border-radius 3px
+        color $color-dark

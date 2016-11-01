@@ -24,7 +24,35 @@
             {#<p class="description">
                 <a href="{{ data.main.content.link }}" class="description-link" target="_top">{{ data.main.content.description }}</a>
             </p>#}
-            <a href="{{ data.main.content.link }}" class="domain" target="_top">{{ data.main.content.domain }}</a>
+            <div class="advertiser">
+                <a href="{{ data.main.content.link }}" class="advertiser-link" target="_top">{{ data.main.content.domain }}</a>
+            </div>
+        </div>
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <div id="adunit" class="ad-1" style="overflow: hidden;">
+        <img src='[%Thirdpartyimpressiontracker%]' style='display:none'>
+        <div class='attribution'>Ad</div>
+        <div class='image'>
+            <a class='image-link' href='%%CLICK_URL_UNESC%%[%Thirdpartyclicktracker%]%%DEST_URL%%' target='_top'><img src="{{ data.main.content.img }}"></a>
+        </div>
+        <div class='title'>
+            <a class='title-link' href='%%CLICK_URL_UNESC%%[%Thirdpartyclicktracker%]%%DEST_URL%%' target='_top'>[%Headline%]</a>
+        </div>
+        <div class='body'>
+            <a class='body-link' href='%%CLICK_URL_UNESC%%[%Thirdpartyclicktracker%]%%DEST_URL%%' target='_top'>[%Body%]</a>
+        </div>
+        <div class='logo'>
+            <a class='logo-link' href='%%CLICK_URL_UNESC%%[%Thirdpartyclicktracker%]%%DEST_URL%%' target='_top'><img src="[%Secondaryimage%]"></a>
+        </div>
+        <div class='advertiser'>
+            <a class='advertiser-link' href='%%CLICK_URL_UNESC%%[%Thirdpartyclicktracker%]%%DEST_URL%%' target='_top'>[%Attribution%]</a>
+        </div>
+        <div class='call-to-action'>
+            <a class='call-to-action-link' href='%%CLICK_URL_UNESC%%[%Thirdpartyclicktracker%]%%DEST_URL%%' target='_top'>[%Calltoaction%]</a>
         </div>
     </div>
 {% endif %}
