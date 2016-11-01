@@ -1,13 +1,10 @@
-.{$banner-name}
+.ad-1
     width $width
     height $heigth
     overflow hidden
     position relative
     border 1px solid $color-gray
     font-family $fontDefault
-
-.content
-    padding $content-padding
 
 .image
     display block
@@ -17,18 +14,24 @@
     &-link
         display block
 
+    img
+        display block
+        width $image-width
+        height $image-height
+
 .attribution
     position absolute
     right -1px
     bottom -1px
     background #ffb300
-    color #fff
-    padding 0 5px 0 15px
+    color #000
+    padding 0 5px 0 5px
     height 13px
-    font-size 8px
+    font-size 10px
     line-height @height
     font-weight bold
     border-top-left-radius 3px
 
-    &:hover
-        color #fff !important
+.logo
+.call-to-action
+    display none
