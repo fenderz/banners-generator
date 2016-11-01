@@ -1,32 +1,33 @@
 .title
     font 400 16px/20px $fontDefault
+    padding-top 12px
     margin-bottom 3px
 
     &-link
         color $color-blue
         text-decoration none
-        transition opacity ease .3s
+
 
         &:hover
-            opacity .7
+            color lighten(#008CC3, 10%)
 
-.description
+.body
     font 400 14px/20px $fontDefault
     margin-bottom 5px
 
     &-link
         color $color-dark
         text-decoration none
-        transition opacity ease .3s
 
         &:hover
-            opacity .7
+            color lighten(#000, 30%)
 
-.domain
+.advertiser
     font 400 14px/20px $fontDefault
-    color $color-green
-    text-decoration none
-    transition opacity ease .3s
 
-    &:hover
-        opacity .7
+    &-link
+        color $color-green
+        text-decoration none
+
+        &:hover
+            color lighten(#629C1C, 15%)
