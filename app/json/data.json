@@ -1,7 +1,7 @@
 {
   "main": {
     "id": 0,
-    "name": "delivery-240x400",
+    "name": "delivery-1000x120",
     "style": {
       "color1": "#00aaff",
       "color2": "#fff",
@@ -9,14 +9,10 @@
       "defaultFont": "Arial, sans-serif"
     },
     "dimensions":{
-      "width": 240,
-      "height": 400,
-      "bannerTopOffset": 25,
-      "bannerSideOffset": 20,
-      "slideTopOffset": 0,
-      "slideBottomOffset": 90,
-      "logoWidth": 186,
-      "logoHeight": 26
+      "width": 1000,
+      "height": 120,
+      "logoWidth": 271,
+      "logoHeight": 38
     },
     "content":{
       "ageLimit": "16+",
