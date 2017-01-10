@@ -6,11 +6,14 @@ var nodemon = require('gulp-nodemon');
 var uglify = require('gulp-uglify');
 var csso = require('gulp-csso');
 var htmlmin = require('gulp-html-minifier');
+var swig = require('gulp-swig');
 var rename = require('gulp-rename');
+var json = require('./app/json/data.json');
 
 var stylesPath = 'app/assets/styles/*.{styl,css}';
 var scriptsPath = 'app/assets/scripts/*.js';
-var json = JSON.parse(fs.readFileSync('./app/json/data.json'));
+var templatesPath = './views/*.html';
+var devPath = 'app/assets/dev/';
 
 gulp.task('styles', function () {
     return gulp
@@ -37,15 +40,34 @@ gulp.task('scripts', function() {
         .pipe(gulp.dest('./public/scripts'));
 });
 
-gulp.task('htmlMinify', function() {
-    gulp.src('./views/*.html')
+gulp.task('devStyles', function () {
+    return gulp
+        .src(devPath + '*.styl')
+        .pipe(stylus())
+        .pipe(csso())
+        .pipe(gulp.dest('./public/styles'));
+});
+
+gulp.task('devScripts', function() {
+    return gulp
+        .src(devPath + '*.js')
+        .pipe(uglify())
+        .pipe(gulp.dest('./public/scripts'));
+});
+
+gulp.task('templates', function() {
+    gulp.src(templatesPath)
+        .pipe(swig({defaults: { cache: false }, data:json}))
         .pipe(htmlmin({collapseWhitespace: true}))
-        .pipe(gulp.dest('./dist'))
+        .pipe(gulp.dest('./dist/'))
 });
 
 gulp.task('watch', function () {
     gulp.watch('app/assets/**/*.{styl,css}', ['styles']);
+    gulp.watch(devPath + '*.styl', ['devStyles']);
+    gulp.watch(templatesPath, ['templates']);
     gulp.watch(scriptsPath, ['scripts']);
+    gulp.watch(devPath + '*.js', ['devScripts']);
 });
 
 gulp.task('startServer', function () {
@@ -58,4 +80,8 @@ gulp.task('startServer', function () {
     })
 });
 
-gulp.task('default', ['styles', 'scripts', 'htmlMinify', 'startServer', 'watch']);
+gulp.task('devTools', ['devStyles', 'devScripts']);
+
+gulp.task('build', ['devTools', 'styles', 'scripts', 'templates']);
+
+gulp.task('default', ['build', 'startServer', 'watch']);

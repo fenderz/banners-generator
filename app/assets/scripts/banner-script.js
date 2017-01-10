@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function () {
     var userAgent = window.navigator.userAgent;
     var activeIndex = 0;
 
-    if (userAgent.match(/iPad/i) || userAgent.match(/iPhone/i)) {
+    if (userAgent.match(/iPad/i) || userAgent.match(/iPhone/i) || userAgent.match(/iPod/i)) {
         document.querySelector('.app-links-ios').addEventListener('click', function (event) {
             event.preventDefault();
             window.parent.location = this.getAttribute('href');
