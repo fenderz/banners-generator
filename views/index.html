@@ -8,19 +8,20 @@
 </head>
 <body class="page-body">
 {% set  a = 'asdsdf'  %}
-    <iframe src="banner.html" frameborder="0" width="{{ main.dimensions.width }}" height="{{ main.dimensions.height }}"></iframe>
+    <iframe class="js-iframe" src="banner.html" frameborder="0" width="{{ main.dimensions.width }}" height="{{ main.dimensions.height }}"></iframe>
     <div class="remote-control">
         <div class="remote-control__counter">
-            <span class="remote-control__counter-current">1</span>
-            <span class="remote-control__counter-all">/ {{ slides.length }}</span>
+            <span class="js-current-slide">1</span>
+            / {{ slides.length }}
         </div>
-        <span class="remote-control__button">
+        <span class="remote-control__button js-backward">
             <i class="fa fa-step-backward"></i>
         </span>
-        <span class="remote-control__button">
+        <span class="remote-control__button remote-control__button_play js-play">
             <i class="fa fa-play"></i>
+            <i class="fa fa-pause"></i>
         </span>
-        <span class="remote-control__button">
+        <span class="remote-control__button js-forward">
             <i class="fa fa-step-forward"></i>
         </span>
         <span class="remote-control__button">
