@@ -3,10 +3,31 @@
 <head>
     <title>Banners generator</title>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="/styles/style.css">
 </head>
 <body class="page-body">
+{% set  a = 'asdsdf'  %}
     <iframe src="banner.html" frameborder="0" width="{{ main.dimensions.width }}" height="{{ main.dimensions.height }}"></iframe>
+    <div class="remote-control">
+        <div class="remote-control__counter">
+            <span class="remote-control__counter-current">1</span>
+            <span class="remote-control__counter-all">/ {{ slides.length }}</span>
+        </div>
+        <span class="remote-control__button">
+            <i class="fa fa-step-backward"></i>
+        </span>
+        <span class="remote-control__button">
+            <i class="fa fa-play"></i>
+        </span>
+        <span class="remote-control__button">
+            <i class="fa fa-step-forward"></i>
+        </span>
+        <span class="remote-control__button">
+            <i class="fa fa-cloud-download"></i>
+            Download
+        </span>
+    </div>
     <script src="/scripts/script.js"></script>
 </body>
 </html>
