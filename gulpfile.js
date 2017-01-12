@@ -11,9 +11,9 @@ var rename = require('gulp-rename');
 var json = require('./app/json/data.json');
 
 var stylesPath = 'app/assets/styles/*.{styl,css}';
+var devStylesPath = 'app/assets/dev/*.styl';
 var scriptsPath = 'app/assets/scripts/*.js';
 var templatesPath = './views/*.html';
-var devPath = 'app/assets/dev/';
 
 gulp.task('styles', function () {
     return gulp
@@ -42,17 +42,10 @@ gulp.task('scripts', function() {
 
 gulp.task('devStyles', function () {
     return gulp
-        .src(devPath + '*.styl')
+        .src(devStylesPath)
         .pipe(stylus())
         .pipe(csso())
         .pipe(gulp.dest('./public/styles'));
-});
-
-gulp.task('devScripts', function() {
-    return gulp
-        .src(devPath + '*.js')
-        .pipe(uglify())
-        .pipe(gulp.dest('./public/scripts'));
 });
 
 gulp.task('templates', function() {
@@ -64,10 +57,9 @@ gulp.task('templates', function() {
 
 gulp.task('watch', function () {
     gulp.watch('app/assets/**/*.{styl,css}', ['styles']);
-    gulp.watch(devPath + '*.styl', ['devStyles']);
+    gulp.watch(devStylesPath, ['devStyles']);
     gulp.watch(templatesPath, ['templates']);
     gulp.watch(scriptsPath, ['scripts']);
-    gulp.watch(devPath + '*.js', ['devScripts']);
 });
 
 gulp.task('startServer', function () {
@@ -80,8 +72,6 @@ gulp.task('startServer', function () {
     })
 });
 
-gulp.task('devTools', ['devStyles', 'devScripts']);
-
-gulp.task('build', ['devTools', 'styles', 'scripts', 'templates']);
+gulp.task('build', ['devStyles', 'styles', 'scripts', 'templates']);
 
 gulp.task('default', ['build', 'startServer', 'watch']);

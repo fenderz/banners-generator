@@ -18,18 +18,18 @@ html, body
     box-sizing border-box
 
 .remote-control
-    position: absolute
-    bottom: 20px
-    padding: 10px
-    border-radius: 5px
-    background: $color-mint
-    color: $color-dark
+    position absolute
+    bottom 20px
+    padding 10px
+    border-radius 5px
+    background $color-mint
+    color $color-dark
 
     &__counter
-        border-radius: 5px
+        border-radius 5px
         background $color-white
         border 1px solid $color-pink
-        display: inline-block
+        display inline-block
         margin-right 30px
         min-height 30px
         line-height @min-height
@@ -38,29 +38,32 @@ html, body
 
     &__button
         position relative
-        border-radius: 5px
-        display: inline-block
-        background: $color-pink
-        color: $color-white
-        padding: 0 10px
-        text-align: center
+        border-radius 5px
+        display inline-block
+        background $color-pink
+        color $color-white
+        text-decoration none
+        padding 0 10px
+        text-align center
         cursor pointer
         min-width 30px
-        margin-right: 5px
+        margin-right 5px
         min-height 30px
         line-height @min-height
         transition background .3s ease
 
         &_play
             .fa-pause
-                display none
-
-        &_pause
-            .fa-pause
                 display inline-block
 
             .fa-play
                 display none
+
+        &_pause
+            .fa-pause
+                display none
+            .fa-play
+                display inline-block
 
         &:last-child
             margin-left 30px

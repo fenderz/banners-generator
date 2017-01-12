@@ -1,56 +1,81 @@
 document.addEventListener('DOMContentLoaded', function () {
-    var PAUSE = 'remote-control__button_pause';
-    var ACTIVE_CLASS = 'slider__item_active';
     var iframeNode = document.querySelector('.js-iframe');
     var iframeWindow = iframeNode.contentWindow;
-    var playNode = document.querySelector('.js-play');
-    var forwardNode = document.querySelector('.js-forward');
-    var backwardNode = document.querySelector('.js-backward');
-    var counterNode = document.querySelector('.js-current-slide');
-    var originalSetTimeout = iframeWindow.setTimeout.bind(iframeWindow);
-    var isOnPause = false;
-    var activeIndex = 0;
-    var task;
 
-    iframeWindow.setTimeout = function(fn, delay) {
-        task = fn;
-        if (!isOnPause) {
-            originalSetTimeout(function() {
-                if (!isOnPause) {
-                    task();
-                }
-            }, delay);
+    iframeWindow.document.addEventListener('DOMContentLoaded', function () {
+        var PAUSE = 'remote-control__button_pause';
+        var ACTIVE_CLASS = 'slider__item_active';
+        var playNode = document.querySelector('.js-play');
+        var forwardNode = document.querySelector('.js-forward');
+        var backwardNode = document.querySelector('.js-backward');
+        var counterNode = document.querySelector('.js-slide-index');
+        var downloadBtnNode = document.querySelector('.js-download');
+        var slideNodesList = Array.prototype.slice.apply(iframeWindow.document.querySelectorAll('.slider__item'));
+        var originalSetTimeout = iframeWindow.setTimeout.bind(iframeWindow);
+        var htmlText = iframeWindow.document.documentElement.innerHTML;
+        var isOnPause = false;
+        var task;
+
+        downloadBtnNode.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(htmlText));
+        downloadBtnNode.setAttribute('download', iframeWindow.document.title + '.html');
+
+        iframeWindow.setTimeout = function (fn, delay) {
+            task = fn;
+            if (!isOnPause) {
+                originalSetTimeout(function () {
+                    if (!isOnPause) {
+                        executeTask()
+                    }
+                }, delay);
+            }
+        };
+
+        setPause(true);
+        setDisplaySlideIndex(getActiveSlideIndex());
+
+        playNode.addEventListener('click', function () {
+            setPause(!isOnPause);
+        });
+
+        forwardNode.addEventListener('click', function () {
+            changeSlide('forward');
+        });
+
+        backwardNode.addEventListener('click', changeSlide);
+
+        function executeTask() {
+            task();
+            setDisplaySlideIndex(getActiveSlideIndex());
         }
-    };
 
-    playNode.addEventListener('click', function () {
-        setPause(!isOnPause);
+        function setDisplaySlideIndex(index) {
+            counterNode.innerHTML = index + 1;
+        }
+
+        function getActiveSlideIndex() {
+            var elemNode = slideNodesList.find(function (elemNode) {
+                return elemNode.classList.contains(ACTIVE_CLASS);
+            });
+            return slideNodesList.indexOf(elemNode);
+        }
+
+        function setPause(status) {
+            isOnPause = status;
+            playNode.classList.toggle(PAUSE, isOnPause);
+            if (!isOnPause) {
+                executeTask();
+            }
+        }
+
+        function changeSlide(direction) {
+            setPause(true);
+            var dir = direction === 'forward' ? 1 : -1;
+            var activeIndex = getActiveSlideIndex();
+            slideNodesList[activeIndex].classList.remove(ACTIVE_CLASS);
+            activeIndex = (activeIndex + dir + slideNodesList.length) % slideNodesList.length;
+            slideNodesList[activeIndex].classList.add(ACTIVE_CLASS);
+            setDisplaySlideIndex(activeIndex);
+        }
     });
-
-    forwardNode.addEventListener('click', function () {
-        setPause(true);
-        changeSlide('forward');
-    });
-
-    backwardNode.addEventListener('click', function () {
-        setPause(true);
-        changeSlide();
-    });
-
-    function setPause(status) {
-        isOnPause = status;
-        playNode.classList.toggle(PAUSE, isOnPause);
-        if (!isOnPause) task();
-    }
-
-    function changeSlide(direction) {
-        var slideNodesList = Array.prototype.slice.apply(iframeNode.contentWindow.document.querySelectorAll('.slider__item'));
-        var dir = direction === 'forward' ? 1 : -1;
-
-        slideNodesList[activeIndex].classList.remove(ACTIVE_CLASS);
-        activeIndex = (activeIndex + dir + slideNodesList.length) % slideNodesList.length;
-        slideNodesList[activeIndex].classList.add(ACTIVE_CLASS);
-        counterNode.innerHTML = activeIndex + 1;
-    }
 });
 

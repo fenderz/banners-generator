@@ -11,7 +11,7 @@
     <iframe class="js-iframe" src="banner.html" frameborder="0" width="{{ main.dimensions.width }}" height="{{ main.dimensions.height }}"></iframe>
     <div class="remote-control">
         <div class="remote-control__counter">
-            <span class="js-current-slide">1</span>
+            <span class="js-slide-index">1</span>
             / {{ slides.length }}
         </div>
         <span class="remote-control__button js-backward">
@@ -24,11 +24,11 @@
         <span class="remote-control__button js-forward">
             <i class="fa fa-step-forward"></i>
         </span>
-        <span class="remote-control__button">
+        <a href="" class="remote-control__button js-download">
             <i class="fa fa-cloud-download"></i>
             Download
-        </span>
+        </a>
     </div>
-    <script src="/scripts/script.js"></script>
+    <script src="/dev/script.js"></script>
 </body>
 </html>
