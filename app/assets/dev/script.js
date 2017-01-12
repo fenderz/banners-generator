@@ -12,11 +12,9 @@ document.addEventListener('DOMContentLoaded', function () {
         var downloadBtnNode = document.querySelector('.js-download');
         var slideNodesList = Array.prototype.slice.apply(iframeWindow.document.querySelectorAll('.slider__item'));
         var originalSetTimeout = iframeWindow.setTimeout.bind(iframeWindow);
-        var htmlText = iframeWindow.document.documentElement.innerHTML;
         var isOnPause = false;
         var task;
 
-        downloadBtnNode.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(htmlText));
         downloadBtnNode.setAttribute('download', iframeWindow.document.title + '.html');
 
         iframeWindow.setTimeout = function (fn, delay) {
