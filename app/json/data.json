@@ -23,7 +23,8 @@
     "content":{
       "ageLimit": "16+",
       "linkIos": "https://itunes.apple.com/ru/app/avito-uslugi-pro-vozmoznost/id1011876040?mt=8",
-      "linkAndroid": "https://play.google.com/store/apps/details?id=com.avito.services&hl=ru"
+      "linkAndroid": "https://play.google.com/store/apps/details?id=com.avito.services&hl=ru",
+      "bannerLink": "https://www.avito.ru/reklama/uslugi"
     }
   },
   "animation": {
@@ -34,9 +35,58 @@
     }
   },
   "slides": [
-    { "id": 1, "image": "", "title": ""},
-    { "id": 2, "image": "", "title": ""},
-    { "id": 3, "image": "", "title": ""},
-    { "id": 4, "image": "", "title": ""}
+    {
+      "top": {
+        "text": "Мобильный офис<br>для исполнителей<br>уже здесь!",
+        "textLevel": 3,
+        "animation": {
+          "direction": "fadein-right",
+          "order": "animate-first"
+        }
+      },
+      "bottom": {
+        "image": "phone",
+        "animation": {
+          "direction": "fadein-bottom",
+          "order": "animate-second"
+        }
+      }
+    },
+    {
+      "top": {
+        "text": "Установите<br>приложение<br>«Avito Услуги Pro»",
+        "textLevel": 3
+      },
+      "bottom": {
+        "image": "phone"
+      }
+    },
+    {
+      "top": {
+        "text": "<strong>Получите<br>скидку 50%</strong> на<br>дополнительные услуги*",
+        "textLevel": 3,
+        "animation": {
+          "direction": "fadein-left",
+          "order": "animate-first"
+        }
+      },
+      "bottom": {
+        "image": "phone",
+        "animation": {
+          "direction": "fadein-bottom",
+          "order": "animate-second"
+        }
+      }
+    },
+    {
+      "top": {
+        "image": "logo",
+        "valignBottom": true
+      },
+      "bottom": {
+        "text": "*Скидка распространяется<br> на услуги: VIP, Поднятие,<br> Выделение, Премиум<br> и пакеты: Быстрая продажа<br> и Турбо-продажа и действует<br>только при оплате из<br>приложения «Avito Услуги Pro».",
+        "textLevel": 1
+      }
+    }
   ]
 }
