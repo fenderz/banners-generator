@@ -9,13 +9,10 @@ document.addEventListener('DOMContentLoaded', function () {
         var forwardNode = document.querySelector('.js-forward');
         var backwardNode = document.querySelector('.js-backward');
         var counterNode = document.querySelector('.js-slide-index');
-        var downloadBtnNode = document.querySelector('.js-download');
         var slideNodesList = Array.prototype.slice.apply(iframeWindow.document.querySelectorAll('.slider__item'));
         var originalSetTimeout = iframeWindow.setTimeout.bind(iframeWindow);
         var isOnPause = false;
         var task;
-
-        downloadBtnNode.setAttribute('download', iframeWindow.document.title + '.html');
 
         iframeWindow.setTimeout = function (fn, delay) {
             task = fn;

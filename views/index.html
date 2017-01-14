@@ -7,11 +7,10 @@
     <link rel="stylesheet" href="/styles/style.css">
 </head>
 <body class="page-body">
-{% set  a = 'asdsdf'  %}
     <iframe class="js-iframe" src="banner.html" frameborder="0" width="{{ main.dimensions.width }}" height="{{ main.dimensions.height }}"></iframe>
     <div class="remote-control">
         <div class="remote-control__counter">
-            <span class="js-slide-index">1</span>
+            <span class="js-slide-index"></span>
             / {{ slides.length }}
         </div>
         <span class="remote-control__button js-backward">
@@ -24,7 +23,7 @@
         <span class="remote-control__button js-forward">
             <i class="fa fa-step-forward"></i>
         </span>
-        <a download href="/banner.html" class="remote-control__button js-download">
+        <a download="{{ main.name }}.html" href="/banner.html" class="remote-control__button">
             <i class="fa fa-cloud-download"></i>
             Download
         </a>
