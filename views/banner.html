@@ -27,29 +27,47 @@
 
         <div class="slider" data-animation-delay="{{ animation.slide.delay }}">
             {% for slide in slides %}
+                {% set animationTop = '' %}
+                {% set animationBottom = '' %}
+                {% if slide.top.animation %}
+                    {% if slide.top.animation.order === 1 %}
+                        {% set order = 'first' %}
+                    {% elseif slide.top.animation.order === 2 %}
+                        {% set order = 'second' %}
+                    {% endif %}
+                    {% set animationTop = 'animate-' + order + ' ' + 'fadein-' + slide.top.animation.direction %}
+                {% endif %}
+                {% if slide.bottom.animation %}
+                    {% if slide.bottom.animation.order === 1 %}
+                        {% set order = 'first' %}
+                    {% elseif slide.bottom.animation.order === 2 %}
+                        {% set order = 'second' %}
+                    {% endif %}
+                    {% set animationBottom = 'animate-' + order + ' ' + 'fadein-' + slide.bottom.animation.direction %}
+                {% endif %}
                 <div class="slider__item{% if loop.first %} slider__item_active{% endif %}">
                     <div class="slide-content">
                         <div class="slide-content__top">
                             <div class="slide-content__inner{% if not slide.top.valignBottom %} slide-content__inner_valign-top{% endif %}">
                                 {% if slide.top.text %}
-                                    <span class="{{ slide.top.animation.direction }} {{ slide.top.animation.order }} title-{{ slide.top.textLevel }} color-white text">
+                                    <span class="color-white text title-{{ slide.top.textLevel }} {{ animationTop }}">
                                         {{ slide.top.text|safe }}
                                     </span>
                                 {% endif %}
                                 {% if slide.top.image %}
-                                    <span class="{{ slide.top.image }} {{ slide.top.animation.direction }} {{ slide.top.animation.order }}"></span>
+                                    <span class="{{ slide.top.image }} {{ animationTop }}"></span>
                                 {% endif %}
                             </div>
                         </div>
                         <div class="slide-content__bottom">
                             <div class="slide-content__inner">
                                 {% if slide.bottom.text %}
-                                    <span class="{{ slide.bottom.animation.order }} title-{{ slide.bottom.textLevel }} text color-white">
+                                    <span class="color-white text title-{{ slide.bottom.textLevel }} {{ animationBottom }}">
                                         {{ slide.bottom.text|safe }}
                                     </span>
                                 {% endif %}
                                 {% if slide.bottom.image %}
-                                    <span class="{{ slide.bottom.image }} {{ slide.bottom.animation.direction }} {{ slide.bottom.animation.order }}"></span>
+                                    <span class="{{ slide.bottom.image }} {{ animationBottom }}"></span>
                                 {% endif %}
                             </div>
                         </div>

@@ -1,12 +1,12 @@
 {
   "main": {
     "name": "banner-240x400",
-    "style":{
+    "style": {
       "color1": "#A169F7",
       "color2": "#fff",
       "defaultFont": "Arial, sans-serif"
     },
-    "dimensions":{
+    "dimensions": {
       "width": 240,
       "height": 400,
       "slideTopOffset": 40,
@@ -20,7 +20,7 @@
       "phoneWidth": 220,
       "phoneHeight": 174
     },
-    "content":{
+    "content": {
       "ageLimit": "16+",
       "linkIos": "https://itunes.apple.com/ru/app/avito-uslugi-pro-vozmoznost/id1011876040?mt=8",
       "linkAndroid": "https://play.google.com/store/apps/details?id=com.avito.services&hl=ru",
@@ -40,15 +40,15 @@
         "text": "Мобильный офис<br>для исполнителей<br>уже здесь!",
         "textLevel": 3,
         "animation": {
-          "direction": "fadein-right",
-          "order": "animate-first"
+          "direction": "right",
+          "order": 1
         }
       },
       "bottom": {
         "image": "phone",
         "animation": {
-          "direction": "fadein-bottom",
-          "order": "animate-second"
+          "direction": "bottom",
+          "order": 2
         }
       }
     },
@@ -66,15 +66,15 @@
         "text": "<strong>Получите<br>скидку 50%</strong> на<br>дополнительные услуги*",
         "textLevel": 3,
         "animation": {
-          "direction": "fadein-left",
-          "order": "animate-first"
+          "direction": "left",
+          "order": 1
         }
       },
       "bottom": {
         "image": "phone",
         "animation": {
-          "direction": "fadein-bottom",
-          "order": "animate-second"
+          "direction": "bottom",
+          "order": 2
         }
       }
     },
