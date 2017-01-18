@@ -42,11 +42,11 @@
         background no-repeat 0 0 / cover
 
     &-ios
-        background-image url('../image/ios-logo.svg')
+        background-image url($img-url + 'ios-logo.svg')
         margin-right 5px
 
     &-android
-        background-image url('../image/android-logo.svg')
+        background-image url($img-url + 'android-logo.svg')
 
 .slider
     position absolute
@@ -92,14 +92,14 @@
         display table-row
 
 .phone
-    background url('../image/device-uslugi-pro.png') no-repeat 0 0 / cover
+    background url($img-url + 'device-uslugi-pro.png') no-repeat 0 0 / cover
     width $phone-width
     height $phone-height
     display inline-block
     vertical-align bottom
 
 .logo
-    background url('../image/avito-logo.svg') no-repeat 0 0 / cover
+    background url($img-url + 'avito-logo.svg') no-repeat 0 0 / cover
     width $logo-width
     height $logo-height
     display inline-block

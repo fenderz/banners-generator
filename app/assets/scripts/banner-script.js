@@ -1,16 +1,11 @@
 document.addEventListener('DOMContentLoaded', function () {
-    var DELAY = document.querySelector('.slider').dataset.animationDelay || 3000;
+    var DELAY = document.body.dataset.animationDelay || 3000;
     var ACTIVE_CLASS = 'slider__item_active';
-
     var slideNodesList = Array.prototype.slice.apply(document.querySelectorAll('.slider__item'));
-    var userAgent = window.navigator.userAgent;
     var activeIndex = 0;
 
-    if (userAgent.match(/iPad/i) || userAgent.match(/iPhone/i)) {
-        document.querySelector('.app-links-ios').addEventListener('click', function (event) {
-            event.preventDefault();
-            window.parent.location = this.getAttribute('href');
-        })
+    if (location.href.indexOf('?slider-debug') === -1) {
+        autoPlay();
     }
 
     function changeSlide() {
@@ -25,7 +20,5 @@ document.addEventListener('DOMContentLoaded', function () {
             autoPlay();
         }, DELAY);
     }
-
-    autoPlay();
 });
 
