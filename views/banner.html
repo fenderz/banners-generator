@@ -8,9 +8,6 @@
     </style>
 </head>
 <body class="page-body">
-{% if error %}
-    <h1>Что-то пошло не так!</h1>
-{% else %}
     <div class="banner-{{ main.dimensions.width }}x{{ main.dimensions.height }}">
         <span class="age-limit">{{ main.content.ageLimit }}</span>
         <div class="static-holder">
@@ -76,9 +73,8 @@
             {% endfor %}
         </div>
     </div>
-{% endif %}
-<script>
-    {% include "../public/scripts/bundle.min.js" %}
-</script>
+    <script>
+        {% include "../public/scripts/bundle.min.js" %}
+    </script>
 </body>
 </html>

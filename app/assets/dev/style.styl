@@ -4,6 +4,7 @@ $color-pink = #FF6B6B
 $color-mint = #4ECDC4
 $color-white = #fff
 $color-dark = #556270
+$offset = 20px
 
 *
     margin 0
@@ -14,12 +15,35 @@ html, body
 
 .page-body
     font 400 14px/1.3 Arial, sans-serif
-    padding 20px
+    padding $offset
     box-sizing border-box
+
+.notice
+    opacity 0
+    position absolute
+    top 0
+    bottom 0
+    left 100%
+    margin-left 20px
+    padding 0 15px
+    border-radius 5px
+    background $color-mint
+    color $color-dark
+    font-size 18px
+    white-space nowrap
+    line-height 52px
+    transition 1s opacity ease
+
+    .fa
+        color $color-pink
+
+    &_show
+        opacity 1
+
 
 .remote-control
     position absolute
-    bottom 20px
+    bottom $offset
     padding 10px
     border-radius 5px
     background $color-mint

@@ -6,11 +6,12 @@
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="/styles/style.css">
 </head>
-<body class="page-body">
-    <iframe class="js-iframe" src="banner.html" frameborder="0" width="{{ main.dimensions.width }}" height="{{ main.dimensions.height }}"></iframe>
+<body class="page-body" data-animation-delay="{{ animation.slide.delay }}">
+
+    <div class="js-container" style="width: {{ main.dimensions.width }}px; height: {{ main.dimensions.height }}px"></div>
     <div class="remote-control">
         <div class="remote-control__counter">
-            <span class="js-slide-index"></span>
+            <span class="js-slide-index">1</span>
             / {{ slides.length }}
         </div>
         <span class="remote-control__button js-backward">
@@ -23,10 +24,14 @@
         <span class="remote-control__button js-forward">
             <i class="fa fa-step-forward"></i>
         </span>
-        <a download="{{ main.name }}.html" href="/banner.html" class="remote-control__button">
+        <a download="banner-{{ main.dimensions.width }}x{{ main.dimensions.height }}.html" href="/banner.html" class="remote-control__button">
             <i class="fa fa-cloud-download"></i>
             Download
         </a>
+        <div class="js-notice notice">
+            <i class="fa fa-check" aria-hidden="true"></i>
+            Update
+        </div>
     </div>
     <script src="/dev/script.js"></script>
 </body>
