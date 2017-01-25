@@ -1,31 +1,26 @@
 {
   "main": {
     "name": "banner-240x400",
-    "style": {
-      "color1": "#A169F7",
-      "color2": "#fff",
-      "defaultFont": "Arial, sans-serif"
-    },
-    "dimensions": {
-      "width": 240,
-      "height": 400,
-      "slideTopOffset": 40,
-      "slideBottomOffset": 65,
-      "staticTopOffset": 12,
-      "sideOffset": 10,
-      "innerOffset": 9,
-      "appLogoWidth": 38,
-      "logoWidth": 190,
-      "logoHeight": 31,
-      "phoneWidth": 220,
-      "phoneHeight": 174
-    },
-    "content": {
-      "ageLimit": "16+",
-      "linkIos": "https://itunes.apple.com/ru/app/avito-uslugi-pro-vozmoznost/id1011876040?mt=8",
-      "linkAndroid": "https://play.google.com/store/apps/details?id=com.avito.services&hl=ru",
-      "bannerLink": "https://www.avito.ru/reklama/uslugi"
-    }
+    "isVertical": false
+  },
+  "style": {
+    "color1": "#A169F7",
+    "color2": "#fff",
+    "defaultFont": "Arial, sans-serif"
+  },
+  "dimensions": {
+    "width": 1000,
+    "height": 120,
+    "slideTopOffset": 40,
+    "slideBottomOffset": 65,
+    "staticTopOffset": 12,
+    "sideOffset": 10,
+    "innerOffset": 9,
+    "appLogoWidth": 38,
+    "logoWidth": 190,
+    "logoHeight": 31,
+    "phoneWidth": 220,
+    "phoneHeight": 174
   },
   "animation": {
     "slide": {
@@ -34,59 +29,124 @@
       "function": "ease"
     }
   },
-  "slides": [
-    {
-      "top": {
-        "text": "Мобильный офис для исполнителей уже здесь!",
-        "textLevel": 3,
-        "animation": {
-          "direction": "right",
-          "order": 1
-        }
-      },
-      "bottom": {
-        "image": "phone",
-        "animation": {
-          "direction": "bottom",
-          "order": 2
-        }
-      }
+  "content": {
+    "static": {
+      "ageLimit": "16+",
+      "linkIos": "https://itunes.apple.com/ru/app/avito-uslugi-pro-vozmoznost/id1011876040?mt=8",
+      "linkAndroid": "https://play.google.com/store/apps/details?id=com.avito.services&hl=ru",
+      "bannerLink": "https://www.avito.ru/reklama/uslugi"
     },
-    {
-      "top": {
-        "text": "Установите приложение «Avito Услуги Pro»",
-        "textLevel": 3
-      },
-      "bottom": {
-        "image": "phone"
-      }
-    },
-    {
-      "top": {
-        "text": "<strong>Получите<br>скидку 50%</strong> на<br>дополнительные услуги*",
-        "textLevel": 3,
-        "animation": {
-          "direction": "left",
-          "order": 1
+    "slides": {
+      "vertical": [
+        {
+          "top": {
+            "text": "Мобильный офис для исполнителей уже здесь!",
+            "textLevel": 3,
+            "animation": {
+              "direction": "right",
+              "order": 1
+            }
+          },
+          "bottom": {
+            "image": "phone",
+            "animation": {
+              "direction": "bottom",
+              "order": 2
+            }
+          }
+        },
+        {
+          "top": {
+            "text": "Установите приложение «Avito Услуги Pro»",
+            "textLevel": 3
+          },
+          "bottom": {
+            "image": "phone"
+          }
+        },
+        {
+          "top": {
+            "text": "<strong>Получите<br>скидку 50%</strong> на<br>дополнительные услуги*",
+            "textLevel": 3,
+            "animation": {
+              "direction": "left",
+              "order": 1
+            }
+          },
+          "bottom": {
+            "image": "phone",
+            "animation": {
+              "direction": "bottom",
+              "order": 2
+            }
+          }
+        },
+        {
+          "top": {
+            "image": "logo",
+            "valignBottom": true
+          },
+          "bottom": {
+            "text": "*Скидка распространяется на услуги: VIP, Поднятие, Выделение, Премиум и пакеты: Быстрая продажа и Турбо-продажа и действует только при оплате из приложения «Avito Услуги Pro».",
+            "textLevel": 1
+          }
         }
-      },
-      "bottom": {
-        "image": "phone",
-        "animation": {
-          "direction": "bottom",
-          "order": 2
+      ],
+      "horizontal": [
+        {
+          "left": {
+            "image": "phone",
+            "valignBottom": true,
+            "animation": {
+              "direction": "bottom",
+              "order": 1
+            }
+          },
+          "right": {
+            "text": "Мобильный офис для профессионалов<br> в услугах уже здесь",
+            "textLevel": 3,
+            "animation": {
+              "direction": "right",
+              "order": 2
+            }
+          }
+        },
+        {
+          "left": {
+            "text": "–50%",
+            "textLevel": 4
+          },
+          "right": {
+            "text": "Установите «Avito Услуги Pro» и получите скидку на дополнительные услуги*",
+            "textLevel": 3,
+            "text2": "*Скидка распространяется на услуги: VIP, Поднятие, Выделение, Премиум и пакеты: Быстрая продажа и Турбо-продажа и действует только при оплате из приложения «Avito Услуги Pro».",
+            "textLevel2": 1
+          }
+        },
+        {
+          "left": {
+            "image": "phone",
+            "valignBottom": true,
+            "animation": {
+              "direction": "left",
+              "order": 2
+            }
+          },
+          "right": {
+            "text": "Установите приложение<br>и зарабатывайте больше с Avito!",
+            "textLevel": 3,
+            "animation": {
+              "direction": "top",
+              "order": 1
+            }
+          }
+        },
+        {
+          "right": {
+            "image": "logo"
+          }
         }
-      }
-    },
-    {
-      "top": {
-        "image": "logo",
-        "valignBottom": true
-      },
-      "bottom": {
-        "text": "*Скидка распространяется на услуги: VIP, Поднятие, Выделение, Премиум и пакеты: Быстрая продажа и Турбо-продажа и действует только при оплате из приложения «Avito Услуги Pro».",
-        "textLevel": 1
-      }
+      ]
     }
-  ]
+  }
 }
