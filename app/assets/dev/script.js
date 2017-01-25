@@ -131,9 +131,9 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    function surpriseMotherFucker() {
+    function displayNotification() {
         noticeNode.classList.add(NOTICE);
-        setTimeout(() => noticeNode.classList.remove(NOTICE), 1000)
+        setTimeout(() => noticeNode.classList.remove(NOTICE), 1000);
         console.log('Reload');
     }
 
@@ -144,17 +144,14 @@ document.addEventListener('DOMContentLoaded', function () {
                     && fileModificationTime !== time
                     && bannerFrame) {
                     const slideIndex = bannerFrame.getActiveSlideIndex();
-                    updateBannerFrame(slideIndex).then(surpriseMotherFucker);
+                    updateBannerFrame(slideIndex).then(displayNotification);
                 }
                 fileModificationTime = time;
                 setTimeout(checkBannerUpdate, POLLING_INTERVAL);
             })
             .catch(error => {
-                //console.error(error);
+                console.error(error);
                 setTimeout(checkBannerUpdate, POLLING_INTERVAL);
             });
     }
 });
-
-
-
