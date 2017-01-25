@@ -31,9 +31,8 @@ gulp.task('styles', function() {
                     },
                     rawDefine: { data: json }
                 }))
-                .pipe(concat('bundle.css'))
                 .pipe(csso())
-                .pipe(rename({suffix: '.min'}))
+                .pipe(rename({suffix: '.bundle.min'}))
                 .pipe(gulp.dest('./public/styles'))
                 .on('end', resolve)
                 .on('error', reject);
@@ -78,22 +77,8 @@ gulp.task('templates', ['styles', 'scripts'],  function() {
     });
 });
 
-gulp.task('templates', ['styles', 'scripts'],  function() {
-    return new Promise((resolve, reject) => {
-        getJson().then(json => {
-            gulp
-                .src(templatesPath)
-                .pipe(swig({defaults: { cache: false }, data: json}))
-                .pipe(htmlmin({collapseWhitespace: true}))
-                .pipe(gulp.dest('./dist/'))
-                .on('end', resolve)
-                .on('error', reject);
-        })
-    });
-});
-
 gulp.task('watch', function () {
-    gulp.watch([templatesPath, 'app/assets/**/*.{styl,css}', scriptsPath, 'app/json/data.json'], ['styles', 'templates']);
+    gulp.watch([templatesPath, './views/slides/*.html', 'app/assets/**/*.{styl,css}', scriptsPath, 'app/json/data.json'], ['styles', 'templates']);
 });
 
 gulp.task('startServer', function() {
