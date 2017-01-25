@@ -1,6 +1,6 @@
-.banner-1000x120
-    width 998px
-    height 118px
+.{$banner-name}
+    width $width
+    height $heigth
     overflow hidden
     position relative
     border 1px solid $color-purple
@@ -89,8 +89,13 @@
         vertical-align middle
         padding-left 40px
 
+    &__left-side
+    &__right-side
+        &_valign-bottom
+            vertical-align bottom
+
 .phone
-    background url($img-url + 'device_uslugi_pro.png') no-repeat 0 0 / cover
+    background url($img-url + 'device-uslugi-pro.png') no-repeat 0 0 / cover
     width 140px
     height 111px
     display inline-block

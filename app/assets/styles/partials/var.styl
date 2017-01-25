@@ -1,33 +1,33 @@
-$banner-name = 'banner-' + data.main.dimensions.width + 'x' + + data.main.dimensions.height
+$banner-name = 'banner-' + data.dimensions.width + 'x' + + data.dimensions.height
 
 // Font-family
-$fontDefault = unquote(data.main.style.defaultFont)
+$fontDefault = unquote(data.style.defaultFont)
 
 // Colors
-$color-purple = unquote(data.main.style.color1)
-$color-white = unquote(data.main.style.color2)
+$color-purple = unquote(data.style.color1)
+$color-white = unquote(data.style.color2)
 
 // Img url
 $img-url = '../../../public/img/'
 
 // Offset
-$width = unit(data.main.dimensions.width - 2, 'px')
-$heigth = unit(data.main.dimensions.height - 2, 'px')
-$slide-top-offset = unit(data.main.dimensions.slideTopOffset, 'px')
-$slide-bottom-offset = unit(data.main.dimensions.slideBottomOffset, 'px')
-$slide-inner-offset = unit(data.main.dimensions.innerOffset, 'px')
-$slide-left-offset = unit(data.main.dimensions.sideOffset, 'px')
+$width = unit(data.dimensions.width - 2, 'px')
+$heigth = unit(data.dimensions.height - 2, 'px')
+$slide-top-offset = unit(data.dimensions.slideTopOffset, 'px')
+$slide-bottom-offset = unit(data.dimensions.slideBottomOffset, 'px')
+$slide-inner-offset = unit(data.dimensions.innerOffset, 'px')
+$slide-left-offset = unit(data.dimensions.sideOffset, 'px')
 $slide-right-offset = $slide-left-offset
 $static-heigth = $slide-bottom-offset
 $left-offset = $slide-left-offset + $slide-inner-offset
 $static-side-offset = $left-offset
-$static-top-offset = unit(data.main.dimensions.staticTopOffset, 'px')
-$app-logo-width = unit(data.main.dimensions.appLogoWidth, 'px')
+$static-top-offset = unit(data.dimensions.staticTopOffset, 'px')
+$app-logo-width = unit(data.dimensions.appLogoWidth, 'px')
 $app-logo-heigth = $app-logo-width
-$logo-width = unit(data.main.dimensions.logoWidth, 'px')
-$logo-height = unit(data.main.dimensions.logoHeight, 'px')
-$phone-width = unit(data.main.dimensions.phoneWidth, 'px')
-$phone-height = unit(data.main.dimensions.phoneHeight, 'px')
+$logo-width = unit(data.dimensions.logoWidth, 'px')
+$logo-height = unit(data.dimensions.logoHeight, 'px')
+$phone-width = unit(data.dimensions.phoneWidth, 'px')
+$phone-height = unit(data.dimensions.phoneHeight, 'px')
 
 // Animation
 $timing-function = unquote(data.animation.slide.function)

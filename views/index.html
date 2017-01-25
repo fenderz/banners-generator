@@ -8,11 +8,11 @@
 </head>
 <body class="page-body" data-animation-delay="{{ animation.slide.delay }}">
 
-    <div class="js-container" style="width: {{ main.dimensions.width }}px; height: {{ main.dimensions.height }}px"></div>
+    <div class="js-container" style="width: {{ dimensions.width }}px; height: {{ dimensions.height }}px"></div>
     <div class="remote-control">
         <div class="remote-control__counter">
             <span class="js-slide-index">1</span>
-            / {{ slides.length }}
+            / {{ content.slides.vertical.length }}
         </div>
         <span class="remote-control__button js-backward">
             <i class="fa fa-step-backward"></i>
@@ -24,12 +24,12 @@
         <span class="remote-control__button js-forward">
             <i class="fa fa-step-forward"></i>
         </span>
-        <a download="banner-{{ main.dimensions.width }}x{{ main.dimensions.height }}.html" href="/banner.html" class="remote-control__button">
+        <a download="banner-{{ dimensions.width }}x{{ dimensions.height }}.html" href="/banner.html" class="remote-control__button">
             <i class="fa fa-cloud-download"></i>
             Download
         </a>
         <div class="js-notice notice">
-            <i class="fa fa-check" aria-hidden="true"></i>
+            <i class="fa fa-check"></i>
             Update
         </div>
     </div>

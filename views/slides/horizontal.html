@@ -1,0 +1,50 @@
+{% for slide in content.slides.horizontal %}
+    {% set animationLeft = '' %}
+    {% set animationRight = '' %}
+    {% if slide.top.animation %}
+        {% if slide.left.animation.order === 1 %}
+            {% set order = 'first' %}
+        {% elseif slide.left.animation.order === 2 %}
+            {% set order = 'second' %}
+        {% endif %}
+        {% set animationLeft = 'animate-' + order + ' ' + 'fadein-' + slide.left.animation.direction %}
+    {% endif %}
+    {% if slide.right.animation %}
+        {% if slide.right.animation.order === 1 %}
+            {% set order = 'first' %}
+        {% elseif slide.right.animation.order === 2 %}
+            {% set order = 'second' %}
+        {% endif %}
+        {% set animationRight = 'animate-' + order + ' ' + 'fadein-' + slide.right.animation.direction %}
+    {% endif %}
+
+    <div class="slider__item{% if loop.first %} slider__item_active{% endif %}">
+        <div class="slide-content">
+            <div class="slide-content__left-side{% if slide.left.valignBottom %} slide-content__left-side_valign-bottom{% endif %}">
+                {% if slide.left.text %}
+                    <span class="color-white text title-{{ slide.left.textLevel }} {{ animationLeft }}">
+                        {{ slide.left.text|safe }}
+                    </span>
+                {% endif %}
+                {% if slide.left.image %}
+                    <span class="{{ slide.left.image }} {{ animationLeft }}"></span>
+                {% endif %}
+            </div>
+            <div class="slide-content__right-side{% if slide.right.valignBottom %} slide-content__right-side_valign-bottom{% endif %}">
+                {% if slide.right.text %}
+                    <span class="color-white text title-{{ slide.right.textLevel }} {{ animationRight }}">
+                        {{ slide.right.text|safe }}
+                    </span>
+                {% endif %}
+                {% if slide.right.text2 %}
+                    <span class="color-white text title-{{ slide.right.textLevel2 }} {{ animationRight }}">
+                        {{ slide.right.text2|safe }}
+                    </span>
+                {% endif %}
+                {% if slide.right.image %}
+                    <span class="{{ slide.right.image }} {{ animationRight }}"></span>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+{% endfor %}
