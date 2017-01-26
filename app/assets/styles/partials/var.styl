@@ -1,5 +1,3 @@
-$banner-name = 'banner-' + data.dimensions.width + 'x' + + data.dimensions.height
-
 // Font-family
 $fontDefault = unquote(data.style.defaultFont)
 
@@ -9,25 +7,6 @@ $color-white = unquote(data.style.color2)
 
 // Img url
 $img-url = '../../../public/img/'
-
-// Offset
-$width = unit(data.dimensions.width - 2, 'px')
-$heigth = unit(data.dimensions.height - 2, 'px')
-$slide-top-offset = unit(data.dimensions.slideTopOffset, 'px')
-$slide-bottom-offset = unit(data.dimensions.slideBottomOffset, 'px')
-$slide-inner-offset = unit(data.dimensions.innerOffset, 'px')
-$slide-left-offset = unit(data.dimensions.sideOffset, 'px')
-$slide-right-offset = $slide-left-offset
-$static-heigth = $slide-bottom-offset
-$left-offset = $slide-left-offset + $slide-inner-offset
-$static-side-offset = $left-offset
-$static-top-offset = unit(data.dimensions.staticTopOffset, 'px')
-$app-logo-width = unit(data.dimensions.appLogoWidth, 'px')
-$app-logo-heigth = $app-logo-width
-$logo-width = unit(data.dimensions.logoWidth, 'px')
-$logo-height = unit(data.dimensions.logoHeight, 'px')
-$phone-width = unit(data.dimensions.phoneWidth, 'px')
-$phone-height = unit(data.dimensions.phoneHeight, 'px')
 
 // Animation
 $timing-function = unquote(data.animation.slide.function)

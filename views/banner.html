@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <title>{{ main.name || 'Banners generator'}}</title>
+    <title>Banner</title>
     <meta charset="utf-8">
     <style>
-        {% if main.isVertical %}
+        {% if isVertical %}
             {% include "../public/styles/vertical.bundle.min.css" %}
+            {% set dimensions = dimensions.vertical %}
         {% else %}
             {% include "../public/styles/horizontal.bundle.min.css" %}
+            {% set dimensions = dimensions.horizontal %}
         {% endif %}
     </style>
 </head>
@@ -28,7 +30,7 @@
         <a target="_blank" href="{{ content.static.bannerLink }}" class="banner-link"></a>
 
         <div class="slider" data-animation-delay="{{ animation.slide.delay }}">
-            {% if main.isVertical %}
+            {% if isVertical %}
                 {% include "../views/slides/vertical.html" %}
             {% else %}
                 {% include "../views/slides/horizontal.html" %}

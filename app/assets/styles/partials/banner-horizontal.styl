@@ -39,8 +39,8 @@
     &-ios
     &-android
         display inline-block
-        width 38px
-        height 38px
+        width $app-logo-width
+        height $app-logo-heigth
         background no-repeat 0 0 / cover
 
     &-ios
@@ -96,14 +96,28 @@
 
 .phone
     background url($img-url + 'device-uslugi-pro.png') no-repeat 0 0 / cover
-    width 140px
-    height 111px
+    width $phone-width
+    height $phone-height
     display inline-block
     vertical-align bottom
 
 .logo
     background url($img-url + 'avito-logo.svg') no-repeat 0 0 / cover
-    width 220px
-    height 36px
+    width $logo-width
+    height $logo-height
     display inline-block
     vertical-align middle
+
+// Typography
+.title-1
+    font 400 11px/1.45 $fontDefault
+    margin-top 10px
+
+.title-2
+    font 700 16px/1.3 $fontDefault
+
+.title-3
+    font 400 22px/1.3 $fontDefault
+
+.title-4
+    font 300 78px/1.3 $fontDefault

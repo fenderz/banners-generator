@@ -133,7 +133,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function displayNotification() {
         noticeNode.classList.add(NOTICE);
-        setTimeout(() => noticeNode.classList.remove(NOTICE), 1000);
+        setTimeout(() => noticeNode.classList.remove(NOTICE), 2000);
         console.log('Reload');
     }
 
