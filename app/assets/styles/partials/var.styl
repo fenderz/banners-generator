@@ -1,3 +1,9 @@
+$type = data.isVertical ? 'vertical' : 'horizontal'
+$dimensions = data.dimensions[$type]
+
+// Banner class name
+$banner-name = 'banner-' + $dimensions.width + 'x' + + $dimensions.height
+
 // Font-family
 $fontDefault = unquote(data.style.defaultFont)
 
@@ -7,6 +13,16 @@ $color-white = unquote(data.style.color2)
 
 // Img url
 $img-url = '../../../public/img/'
+
+// Banner dimensions
+$width = unit($dimensions.width - 2, 'px')
+$heigth = unit($dimensions.height - 2, 'px')
+$app-logo-width = unit($dimensions.appLogoWidth, 'px')
+$app-logo-heigth = $app-logo-width
+$logo-width = unit($dimensions.logoWidth, 'px')
+$logo-height = unit($dimensions.logoHeight, 'px')
+$phone-width = unit($dimensions.phoneWidth, 'px')
+$phone-height = unit($dimensions.phoneHeight, 'px')
 
 // Animation
 $timing-function = unquote(data.animation.slide.function)
